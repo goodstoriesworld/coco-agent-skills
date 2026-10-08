@@ -1,11 +1,11 @@
 ---
-name: coco-content-creator
+name: content-creator
 description: Generate multi-platform content (LinkedIn, Twitter/X, email, blog) from a single input. Use when the user needs to create social media posts, email campaigns, blog drafts, or repurpose content across platforms. Handles platform-specific formatting, tone adaptation, and content calendaring.
 license: Apache-2.0
 metadata:
   author: good-stories-llc
   version: "1.0"
-  brand: COCO
+  brand: Good Stories
   website: https://goodstories.world
 ---
 

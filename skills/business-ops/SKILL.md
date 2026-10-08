@@ -1,11 +1,11 @@
 ---
-name: coco-business-ops
+name: business-ops
 description: Business operations assistant for tracking revenue, expenses, clients, content, and goals. Use when the user needs to build a business dashboard, track revenue streams, manage a client pipeline, plan content calendars, set growth goals, or generate weekly business reviews. Covers the full operations stack for small businesses.
 license: Apache-2.0
 metadata:
   author: good-stories-llc
   version: "1.0"
-  brand: COCO
+  brand: Good Stories
   website: https://goodstories.world
 ---
 

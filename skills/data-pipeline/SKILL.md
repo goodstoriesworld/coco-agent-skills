@@ -1,11 +1,11 @@
 ---
-name: coco-data-pipeline
+name: data-pipeline
 description: Build production-style CSV analytics pipelines with validation, automated insight generation, and visualization. Use when analyzing datasets, building data ingestion systems, generating reports from CSV/tabular data, or creating automated analytics workflows.
 license: Apache-2.0
 metadata:
   author: good-stories-llc
   version: "1.0"
-  brand: COCO
+  brand: Good Stories
 ---
 
 # Data Pipeline Builder

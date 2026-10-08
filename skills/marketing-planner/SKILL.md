@@ -1,11 +1,11 @@
 ---
-name: coco-marketing-planner
+name: marketing-planner
 description: Generate complete marketing campaigns from product details. Use when planning launches, creating content strategies, building campaign briefs, or generating messaging and channel recommendations from a product name, target audience, and budget.
 license: Apache-2.0
 metadata:
   author: good-stories-llc
   version: "1.0"
-  brand: COCO
+  brand: Good Stories
 ---
 
 # Marketing Planner

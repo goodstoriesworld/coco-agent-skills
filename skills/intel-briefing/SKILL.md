@@ -1,11 +1,11 @@
 ---
-name: coco-intel-briefing
+name: intel-briefing
 description: Build a daily intelligence briefing pipeline from RSS feeds. Use when the user wants to set up automated news monitoring, create daily briefings, summarize articles from multiple sources, or build an intelligence pipeline with business impact analysis. Handles RSS fetching, LLM summarization, deduplication, and structured output.
 license: Apache-2.0
 metadata:
   author: good-stories-llc
   version: "1.0"
-  brand: COCO
+  brand: Good Stories
   website: https://goodstories.world
 ---
 

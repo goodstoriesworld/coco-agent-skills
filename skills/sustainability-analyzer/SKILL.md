@@ -1,11 +1,11 @@
 ---
-name: coco-sustainability-analyzer
+name: sustainability-analyzer
 description: Evaluate and optimize sustainability impact for engineering and business projects. Use when calculating carbon footprint, assessing energy efficiency, scoring material sustainability, or generating green recommendations for projects.
 license: Apache-2.0
 metadata:
   author: good-stories-llc
   version: "1.0"
-  brand: COCO
+  brand: Good Stories
 ---
 
 # Sustainability Analyzer

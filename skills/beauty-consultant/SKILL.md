@@ -1,11 +1,11 @@
 ---
-name: coco-beauty-consultant
+name: beauty-consultant
 description: Build modular beauty consultation systems that analyze skin profiles and generate personalized skincare and makeup routines. Use when creating beauty advisor tools, skincare recommendation engines, product matching systems, or personalized wellness platforms. Handles intake, ingredient reasoning, safety guardrails, and structured output.
 license: Apache-2.0
 metadata:
   author: good-stories-llc
   version: "1.0"
-  brand: COCO
+  brand: Good Stories
   website: https://goodstories.world
 ---
 
