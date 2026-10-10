@@ -429,31 +429,12 @@ The pipeline must handle these scenarios without crashing:
 | Malformed rows | Skip bad rows, log count and line numbers |
 | Column names with spaces/special chars | Normalize column names on ingest |
 
-## Quick Start with the Good Stories API
+## Optional Good Stories API
 
-Use the Good Stories API to extract structured data and summarize content without building your own LLM pipeline. Create a personal API key at [goodstories.world/pricing](https://goodstories.world/pricing) and export it as `GOOD_STORIES_API_KEY`.
-
-**Extract structured data:**
-
-```bash
-curl -X POST https://api.goodstories.world/v1/extract \
-  -H "Content-Type: application/json" \
-  -H "X-API-Key: $GOOD_STORIES_API_KEY" \
-  -d '{"text": "Your text here...", "schema": {"company": "string", "revenue": "number", "date": "string"}}'
-```
-
-**Summarize data insights:**
-
-```bash
-curl -X POST https://api.goodstories.world/v1/summarize \
-  -H "Content-Type: application/json" \
-  -H "X-API-Key: $GOOD_STORIES_API_KEY" \
-  -d '{"text": "Your analysis results...", "style": "executive"}'
-```
-
-**Plans:** Free includes 10 weighted credits/day; Pro is $49/month for 100/day; Business is $79/month for 1,000/day. Every plan has a hard daily cap.
-**Get a key:** [goodstories.world/pricing](https://goodstories.world/pricing)
-**Full docs:** [api.goodstories.world/docs](https://api.goodstories.world/docs)
+For API-key-authenticated extraction and summarization workflows, see the
+[Good Stories API documentation](https://api.goodstories.world/docs). Configure
+credentials in an API client outside this skill; do not paste secrets into a
+prompt or project file.
 
 ## Dependencies
 
