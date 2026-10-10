@@ -1,0 +1,15 @@
+{
+  "name": "good-stories",
+  "description": "Good Stories Media Tech Lab plugins for storytellers and their AI agents.",
+  "owner": {
+    "name": "Good Stories LLC",
+    "email": "hello@goodstories.world"
+  },
+  "plugins": [
+    {
+      "name": "good-stories",
+      "source": "./",
+      "description": "18 skills for storytelling, media operations, content, data, and engineering."
+    }
+  ]
+}

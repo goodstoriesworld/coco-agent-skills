@@ -7,6 +7,9 @@
 ## Quick Install
 
 ```bash
+# Install the Claude Code plugin from the Good Stories marketplace
+/plugin install good-stories --marketplace goodstoriesworld/goodstories-agent-skills
+
 # Install all skills (any agent that supports npx skills)
 npx skills add goodstoriesworld/goodstories-agent-skills
 
@@ -15,9 +18,9 @@ git clone https://github.com/goodstoriesworld/goodstories-agent-skills.git .agen
 claude --plugin-dir .agents/skills/good-stories
 ```
 
-The bundle is being prepared for the Claude plugin directory. Until that
-listing is approved, use `--plugin-dir` for Claude Code or install the skills
-with `npx skills` as shown above.
+The bundle is also being prepared for the Claude plugin directory. The
+self-hosted marketplace command above works independently of directory review;
+use `--plugin-dir` when evaluating a local checkout.
 
 ## Good Stories Originals
 
