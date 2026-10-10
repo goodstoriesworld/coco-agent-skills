@@ -204,34 +204,12 @@ def plan_content_week(topics: list[str], platforms: list[str]) -> list[dict]:
     return calendar
 ```
 
-## Quick Start with the Good Stories API
+## Optional Good Stories API
 
-Instead of building content generation from scratch, use the Good Stories API to generate platform-specific content in one call. Create a personal API key at [goodstories.world/pricing](https://goodstories.world/pricing) and export it as `GOOD_STORIES_API_KEY`.
-
-**Generate content:**
-
-```bash
-curl -X POST https://api.goodstories.world/v1/content/generate \
-  -H "Content-Type: application/json" \
-  -H "X-API-Key: $GOOD_STORIES_API_KEY" \
-  -d '{"topic": "How AI is changing content creation", "platform": "linkedin"}'
-```
-
-```python
-import httpx
-import os
-
-resp = httpx.post(
-    "https://api.goodstories.world/v1/content/generate",
-    headers={"X-API-Key": os.environ["GOOD_STORIES_API_KEY"]},
-    json={"topic": "How AI is changing content creation", "platform": "linkedin"},
-)
-content = resp.json()
-```
-
-**Plans:** Free includes 10 weighted credits/day; Pro is $49/month for 100/day; Business is $79/month for 1,000/day. Every plan has a hard daily cap.
-**Get a key:** [goodstories.world/pricing](https://goodstories.world/pricing)
-**Full docs:** [api.goodstories.world/docs](https://api.goodstories.world/docs)
+For API-key-authenticated narrative and content workflows, see the
+[Good Stories API documentation](https://api.goodstories.world/docs). Configure
+credentials in an API client outside this skill; do not paste secrets into a
+prompt or project file.
 
 ## Dependencies
 
