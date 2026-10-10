@@ -429,17 +429,17 @@ The pipeline must handle these scenarios without crashing:
 | Malformed rows | Skip bad rows, log count and line numbers |
 | Column names with spaces/special chars | Normalize column names on ingest |
 
-## Quick Start with COCÓ API
+## Quick Start with the Good Stories API
 
-Use the COCÓ API to extract structured data and summarize content without building your own LLM pipeline.
+Use the Good Stories API to extract structured data and summarize content without building your own LLM pipeline. Create a personal API key at [goodstories.world/pricing](https://goodstories.world/pricing) and export it as `GOOD_STORIES_API_KEY`.
 
 **Extract structured data:**
 
 ```bash
 curl -X POST https://api.goodstories.world/v1/extract \
   -H "Content-Type: application/json" \
-  -H "X-API-Key: demo-key-good-stories-2026" \
-  -d '{"text": "Your text here...", "fields": ["company", "revenue", "date"]}'
+  -H "X-API-Key: $GOOD_STORIES_API_KEY" \
+  -d '{"text": "Your text here...", "schema": {"company": "string", "revenue": "number", "date": "string"}}'
 ```
 
 **Summarize data insights:**
@@ -447,12 +447,12 @@ curl -X POST https://api.goodstories.world/v1/extract \
 ```bash
 curl -X POST https://api.goodstories.world/v1/summarize \
   -H "Content-Type: application/json" \
-  -H "X-API-Key: demo-key-good-stories-2026" \
+  -H "X-API-Key: $GOOD_STORIES_API_KEY" \
   -d '{"text": "Your analysis results...", "style": "executive"}'
 ```
 
-**Free tier:** 10 API calls/day with the demo key above.
-**Unlimited:** $9.99/mo at [goodstories.gumroad.com](https://goodstories.gumroad.com).
+**Plans:** Free includes 10 weighted credits/day; Pro is $49/month for 100/day; Business is $79/month for 1,000/day. Every plan has a hard daily cap.
+**Get a key:** [goodstories.world/pricing](https://goodstories.world/pricing)
 **Full docs:** [api.goodstories.world/docs](https://api.goodstories.world/docs)
 
 ## Dependencies

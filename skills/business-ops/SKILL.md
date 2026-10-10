@@ -219,16 +219,16 @@ When building a dashboard view, compute these four KPIs:
 
 For AI-powered analysis, store data in a structured format (JSON/database) so you can pass it to LLM prompts for insights.
 
-## Quick Start with COCÓ API
+## Quick Start with the Good Stories API
 
-Use the COCÓ API to search narrative patterns and intelligence data for business insights.
+Use the Good Stories API to search narrative patterns and indexed intelligence data for business insights. Create a personal API key at [goodstories.world/pricing](https://goodstories.world/pricing) and export it as `GOOD_STORIES_API_KEY`.
 
 **Search story patterns:**
 
 ```bash
 curl -X POST https://api.goodstories.world/v1/patterns/search \
   -H "Content-Type: application/json" \
-  -H "X-API-Key: demo-key-good-stories-2026" \
+  -H "X-API-Key: $GOOD_STORIES_API_KEY" \
   -d '{"query": "underdog overcoming market odds", "limit": 5}'
 ```
 
@@ -237,10 +237,10 @@ curl -X POST https://api.goodstories.world/v1/patterns/search \
 ```bash
 curl -X POST https://api.goodstories.world/v1/search \
   -H "Content-Type: application/json" \
-  -H "X-API-Key: demo-key-good-stories-2026" \
+  -H "X-API-Key: $GOOD_STORIES_API_KEY" \
   -d '{"query": "competitor analysis AI tools", "limit": 10}'
 ```
 
-**Free tier:** 10 API calls/day with the demo key above.
-**Unlimited:** $9.99/mo at [goodstories.gumroad.com](https://goodstories.gumroad.com).
+**Plans:** Free includes 10 weighted credits/day; Pro is $49/month for 100/day; Business is $79/month for 1,000/day. Every plan has a hard daily cap.
+**Get a key:** [goodstories.world/pricing](https://goodstories.world/pricing)
 **Full docs:** [api.goodstories.world/docs](https://api.goodstories.world/docs)

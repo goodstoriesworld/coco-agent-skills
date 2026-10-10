@@ -7,15 +7,17 @@
 ## Quick Install
 
 ```bash
-# As a Claude Code plugin
-/plugin install good-stories@goodstoriesworld/coco-agent-skills
-
 # Install all skills (any agent that supports npx skills)
-npx skills add goodstoriesworld/coco-agent-skills
+npx skills add goodstoriesworld/goodstories-agent-skills
 
-# Or clone directly
-git clone https://github.com/goodstoriesworld/coco-agent-skills.git .agents/skills/good-stories
+# Evaluate the Claude Code plugin directly from a local checkout
+git clone https://github.com/goodstoriesworld/goodstories-agent-skills.git .agents/skills/good-stories
+claude --plugin-dir .agents/skills/good-stories
 ```
+
+The bundle is being prepared for the Claude plugin directory. Until that
+listing is approved, use `--plugin-dir` for Claude Code or install the skills
+with `npx skills` as shown above.
 
 ## Good Stories Originals
 
@@ -75,19 +77,19 @@ Claude Code, Cursor, VS Code Copilot, GitHub Copilot, OpenAI Codex, Gemini CLI, 
 
 ```bash
 # Install just one skill
-npx skills add goodstoriesworld/coco-agent-skills --skill intel-briefing
+npx skills add goodstoriesworld/goodstories-agent-skills --skill intel-briefing
 
 # Or copy manually
-cp -r coco-agent-skills/skills/intel-briefing .agents/skills/
+cp -r goodstories-agent-skills/skills/intel-briefing .agents/skills/
 ```
 
 ## About Good Stories
 
-Good Stories LLC is a Media Tech Lab for storytellers and their AI agents — a lab of AI tools serving the Media & Entertainment industry. Products include the Good Stories API, Agent Payments (MPP), interactive dashboards, prompt packs, and these agent skills.
+Good Stories LLC is a Media Tech Lab for storytellers and their AI agents — a lab of AI tools serving the Media & Entertainment industry. Current products include the Good Stories API, an API-key-authenticated MCP server, interactive dashboards, prompt packs, and these agent skills. Agent payments remain a standards-research track, not a live payment rail.
 
 - Website: [goodstories.world](https://goodstories.world)
 - API docs: [api.goodstories.world/docs](https://api.goodstories.world/docs)
-- Products: [goodstories.gumroad.com](https://goodstories.gumroad.com)
+- API access and plans: [goodstories.world/pricing](https://goodstories.world/pricing)
 
 ## License
 

@@ -170,25 +170,26 @@ schtasks /create /tn "DailyBriefing" /tr "python C:\path\to\briefing.py" /sc dai
 - **Embeddings:** Generate vector embeddings on summaries for semantic search later
 - **Dedup TTL:** Prune seen articles older than 90 days to keep the cache small
 
-## Quick Start with COCÓ API
+## Quick Start with the Good Stories API
 
-Instead of building the full pipeline yourself, use the COCÓ API to summarize articles and search your intelligence database in one call.
+Instead of building the full pipeline yourself, use the Good Stories API to summarize articles and search an indexed intelligence corpus. Create a personal API key at [goodstories.world/pricing](https://goodstories.world/pricing) and export it as `GOOD_STORIES_API_KEY`.
 
 **Summarize an article:**
 
 ```bash
 curl -X POST https://api.goodstories.world/v1/summarize \
   -H "Content-Type: application/json" \
-  -H "X-API-Key: demo-key-good-stories-2026" \
+  -H "X-API-Key: $GOOD_STORIES_API_KEY" \
   -d '{"text": "Your article text here...", "style": "executive"}'
 ```
 
 ```python
 import httpx
+import os
 
 resp = httpx.post(
     "https://api.goodstories.world/v1/summarize",
-    headers={"X-API-Key": "demo-key-good-stories-2026"},
+    headers={"X-API-Key": os.environ["GOOD_STORIES_API_KEY"]},
     json={"text": article_text, "style": "executive"},
 )
 summary = resp.json()["summary"]
@@ -199,12 +200,12 @@ summary = resp.json()["summary"]
 ```bash
 curl -X POST https://api.goodstories.world/v1/search \
   -H "Content-Type: application/json" \
-  -H "X-API-Key: demo-key-good-stories-2026" \
+  -H "X-API-Key: $GOOD_STORIES_API_KEY" \
   -d '{"query": "AI regulation impact on startups"}'
 ```
 
-**Free tier:** 10 API calls/day with the demo key above.
-**Unlimited:** $9.99/mo at [goodstories.gumroad.com](https://goodstories.gumroad.com).
+**Plans:** Free includes 10 weighted credits/day; Pro is $49/month for 100/day; Business is $79/month for 1,000/day. Every plan has a hard daily cap.
+**Get a key:** [goodstories.world/pricing](https://goodstories.world/pricing)
 **Full docs:** [api.goodstories.world/docs](https://api.goodstories.world/docs)
 
 ## Dependencies
