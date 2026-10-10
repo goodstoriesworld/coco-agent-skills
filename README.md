@@ -1,40 +1,52 @@
-# COCO Agent Skills
+# Good Stories Agent Skills
 
-> Tools for humans building and creating with AI
+> A Media Tech Lab skill bundle for storytellers and their AI agents
 
-16 open-source [Agent Skills](https://agentskills.io) for business operations, engineering, content creation, and data analysis. Compatible with **32+ AI coding tools** including Claude Code, Cursor, VS Code Copilot, Gemini CLI, OpenAI Codex, and more.
+18 open-source [Agent Skills](https://agentskills.io) from the Good Stories Media Tech Lab — business operations, engineering, content creation, and data analysis for the Media & Entertainment industry. Ships as a Claude Code plugin (`.claude-plugin/plugin.json` + `skills/`) and stays compatible with **32+ AI coding tools** including Claude Code, Cursor, VS Code Copilot, Gemini CLI, OpenAI Codex, and more.
 
 ## Quick Install
 
 ```bash
 # Install all skills (any agent that supports npx skills)
-npx skills add goodstoriesworld/coco-agent-skills
+npx skills add goodstoriesworld/goodstories-agent-skills
 
-# Or clone directly
-git clone https://github.com/goodstoriesworld/coco-agent-skills.git .agents/skills/coco
+# Evaluate the Claude Code plugin directly from a local checkout
+git clone https://github.com/goodstoriesworld/goodstories-agent-skills.git .agents/skills/good-stories
+claude --plugin-dir .agents/skills/good-stories
 ```
 
-## COCO Originals
+The bundle is being prepared for the Claude plugin directory. Until that
+listing is approved, use `--plugin-dir` for Claude Code or install the skills
+with `npx skills` as shown above.
 
-Skills built by COCO — unique workflows you won't find elsewhere.
+## Good Stories Originals
+
+Skills built in the lab — unique workflows you won't find elsewhere.
 
 ### Business & Operations
 
 | Skill | Description |
 |-------|-------------|
-| [coco-intel-briefing](coco-intel-briefing/) | Build a daily intelligence briefing pipeline from RSS feeds |
-| [coco-content-creator](coco-content-creator/) | Generate multi-platform content (LinkedIn, Twitter/X, email, blog) from a single input |
-| [coco-business-ops](coco-business-ops/) | Business operations assistant — revenue, expenses, clients, content, goals |
-| [coco-marketing-planner](coco-marketing-planner/) | Generate complete marketing campaigns from product details |
-| [coco-budget-planner](coco-budget-planner/) | Build budgeting tools with savings projections and allocation strategies |
+| [intel-briefing](skills/intel-briefing/) | Build a daily intelligence briefing pipeline from RSS feeds |
+| [content-creator](skills/content-creator/) | Generate multi-platform content (LinkedIn, Twitter/X, email, blog) from a single input |
+| [business-ops](skills/business-ops/) | Business operations assistant — revenue, expenses, clients, content, goals |
+| [marketing-planner](skills/marketing-planner/) | Generate complete marketing campaigns from product details |
+| [budget-planner](skills/budget-planner/) | Build budgeting tools with savings projections and allocation strategies |
 
 ### Engineering & Data
 
 | Skill | Description |
 |-------|-------------|
-| [coco-multi-agent-system](coco-multi-agent-system/) | Build production multi-agent systems that plan, implement, test, and evaluate autonomously |
-| [coco-data-pipeline](coco-data-pipeline/) | Build CSV analytics pipelines with validation, insight generation, and visualization |
-| [coco-sustainability-analyzer](coco-sustainability-analyzer/) | Evaluate and optimize sustainability impact for engineering projects |
+| [multi-agent-system](skills/multi-agent-system/) | Build production multi-agent systems that plan, implement, test, and evaluate autonomously |
+| [data-pipeline](skills/data-pipeline/) | Build CSV analytics pipelines with validation, insight generation, and visualization |
+| [sustainability-analyzer](skills/sustainability-analyzer/) | Evaluate and optimize sustainability impact for engineering projects |
+
+### Creative & Consumer
+
+| Skill | Description |
+|-------|-------------|
+| [quiz-platform](skills/quiz-platform/) | Build production-style quiz platforms with persistent storage, scoring, and admin capabilities |
+| [beauty-consultant](skills/beauty-consultant/) | Modular beauty consultation systems with skin-profile analysis and personalized recommendations |
 
 ## Curated Collection
 
@@ -44,16 +56,16 @@ Top open-source skills from the community, vendored with proper attribution. All
 
 | Skill | Description | Original Source |
 |-------|-------------|-----------------|
-| [code-reviewer](vendored/code-reviewer/) | Thorough code reviews with structured feedback | TerminalSkills |
-| [test-generator](vendored/test-generator/) | Auto-generate comprehensive test suites | TerminalSkills |
-| [git-commit-pro](vendored/git-commit-pro/) | Write clear conventional commit messages | TerminalSkills |
-| [security-audit](vendored/security-audit/) | Audit code for security vulnerabilities | TerminalSkills |
-| [sql-optimizer](vendored/sql-optimizer/) | Optimize SQL queries for performance | TerminalSkills |
-| [frontend-design](vendored/frontend-design/) | Build production-grade frontend interfaces | Anthropic |
-| [api-designer](vendored/api-designer/) | Design clean REST and GraphQL APIs | COCO |
-| [prompt-engineering](vendored/prompt-engineering/) | Write effective prompts using proven patterns | ok-skills |
+| [code-reviewer](skills/code-reviewer/) | Thorough code reviews with structured feedback | TerminalSkills |
+| [test-generator](skills/test-generator/) | Auto-generate comprehensive test suites | TerminalSkills |
+| [git-commit-pro](skills/git-commit-pro/) | Write clear conventional commit messages | TerminalSkills |
+| [security-audit](skills/security-audit/) | Audit code for security vulnerabilities | TerminalSkills |
+| [sql-optimizer](skills/sql-optimizer/) | Optimize SQL queries for performance | TerminalSkills |
+| [frontend-design](skills/frontend-design/) | Build production-grade frontend interfaces | Anthropic |
+| [api-designer](skills/api-designer/) | Design clean REST and GraphQL APIs | Good Stories |
+| [prompt-engineering](skills/prompt-engineering/) | Write effective prompts using proven patterns | ok-skills |
 
-See [vendored/NOTICE.md](vendored/NOTICE.md) for full attribution.
+See [NOTICE.md](NOTICE.md) for full attribution.
 
 ## Compatible Tools
 
@@ -65,18 +77,19 @@ Claude Code, Cursor, VS Code Copilot, GitHub Copilot, OpenAI Codex, Gemini CLI, 
 
 ```bash
 # Install just one skill
-npx skills add goodstoriesworld/coco-agent-skills --skill coco-intel-briefing
+npx skills add goodstoriesworld/goodstories-agent-skills --skill intel-briefing
 
 # Or copy manually
-cp -r coco-agent-skills/coco-intel-briefing .agents/skills/
+cp -r goodstories-agent-skills/skills/intel-briefing .agents/skills/
 ```
 
-## About COCO
+## About Good Stories
 
-COCÓ builds AI-powered tools for humans who build and create. Products include interactive dashboards, API services, prompt packs, and agent skills.
+Good Stories LLC is a Media Tech Lab for storytellers and their AI agents — a lab of AI tools serving the Media & Entertainment industry. Current products include the Good Stories API, an API-key-authenticated MCP server, interactive dashboards, prompt packs, and these agent skills. Agent payments remain a standards-research track, not a live payment rail.
 
 - Website: [goodstories.world](https://goodstories.world)
-- Products: [goodstories.gumroad.com](https://goodstories.gumroad.com)
+- API docs: [api.goodstories.world/docs](https://api.goodstories.world/docs)
+- API access and plans: [goodstories.world/pricing](https://goodstories.world/pricing)
 
 ## License
 

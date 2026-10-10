@@ -1,11 +1,11 @@
 ---
-name: coco-quiz-platform
+name: quiz-platform
 description: Build production-style quiz platforms with persistent storage, scoring logic, and admin capabilities. Use when creating educational quizzes, knowledge assessments, trivia games, certification tests, or any interactive Q&A system with user authentication and score tracking.
 license: Apache-2.0
 metadata:
   author: good-stories-llc
   version: "1.0"
-  brand: COCO
+  brand: Good Stories
   website: https://goodstories.world
 ---
 

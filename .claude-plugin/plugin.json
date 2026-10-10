@@ -1,0 +1,23 @@
+{
+  "name": "good-stories",
+  "description": "Good Stories Media Tech Lab skill bundle — 18 Agent Skills for storytellers and their AI agents: intelligence briefings, multi-platform content creation, marketing campaigns, business ops, data pipelines, and curated engineering skills.",
+  "version": "2.0.0",
+  "author": {
+    "name": "Good Stories LLC",
+    "email": "hello@goodstories.world",
+    "url": "https://goodstories.world"
+  },
+  "homepage": "https://goodstories.world",
+  "repository": "https://github.com/goodstoriesworld/goodstories-agent-skills",
+  "license": "Apache-2.0",
+  "keywords": [
+    "media",
+    "entertainment",
+    "storytelling",
+    "content-creation",
+    "intelligence-briefing",
+    "marketing",
+    "business-ops",
+    "agent-skills"
+  ]
+}

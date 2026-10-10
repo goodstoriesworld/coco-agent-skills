@@ -1,6 +1,6 @@
 # Attribution Notice
 
-The skills in this directory are vendored (bundled) from open-source community projects.
+The skills listed below are vendored (bundled) from open-source community projects.
 All vendored skills are licensed under Apache 2.0 and include original author attribution
 in their SKILL.md metadata.
 

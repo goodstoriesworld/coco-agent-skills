@@ -1,11 +1,11 @@
 ---
-name: coco-budget-planner
+name: budget-planner
 description: Build personal or business budgeting tools with savings projections. Use when creating budget calculators, expense trackers, savings goal planners, or financial dashboards. Includes allocation strategies and visual reporting.
 license: Apache-2.0
 metadata:
   author: good-stories-llc
   version: "1.0"
-  brand: COCO
+  brand: Good Stories
 ---
 
 # Budget Planner

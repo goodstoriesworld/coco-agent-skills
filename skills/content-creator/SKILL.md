@@ -1,11 +1,11 @@
 ---
-name: coco-content-creator
+name: content-creator
 description: Generate multi-platform content (LinkedIn, Twitter/X, email, blog) from a single input. Use when the user needs to create social media posts, email campaigns, blog drafts, or repurpose content across platforms. Handles platform-specific formatting, tone adaptation, and content calendaring.
 license: Apache-2.0
 metadata:
   author: good-stories-llc
   version: "1.0"
-  brand: COCO
+  brand: Good Stories
   website: https://goodstories.world
 ---
 
@@ -204,32 +204,33 @@ def plan_content_week(topics: list[str], platforms: list[str]) -> list[dict]:
     return calendar
 ```
 
-## Quick Start with COCÓ API
+## Quick Start with the Good Stories API
 
-Instead of building content generation from scratch, use the COCÓ API to generate platform-specific content in one call.
+Instead of building content generation from scratch, use the Good Stories API to generate platform-specific content in one call. Create a personal API key at [goodstories.world/pricing](https://goodstories.world/pricing) and export it as `GOOD_STORIES_API_KEY`.
 
 **Generate content:**
 
 ```bash
 curl -X POST https://api.goodstories.world/v1/content/generate \
   -H "Content-Type: application/json" \
-  -H "X-API-Key: demo-key-good-stories-2026" \
+  -H "X-API-Key: $GOOD_STORIES_API_KEY" \
   -d '{"topic": "How AI is changing content creation", "platform": "linkedin"}'
 ```
 
 ```python
 import httpx
+import os
 
 resp = httpx.post(
     "https://api.goodstories.world/v1/content/generate",
-    headers={"X-API-Key": "demo-key-good-stories-2026"},
+    headers={"X-API-Key": os.environ["GOOD_STORIES_API_KEY"]},
     json={"topic": "How AI is changing content creation", "platform": "linkedin"},
 )
 content = resp.json()
 ```
 
-**Free tier:** 10 API calls/day with the demo key above.
-**Unlimited:** $9.99/mo at [goodstories.gumroad.com](https://goodstories.gumroad.com).
+**Plans:** Free includes 10 weighted credits/day; Pro is $49/month for 100/day; Business is $79/month for 1,000/day. Every plan has a hard daily cap.
+**Get a key:** [goodstories.world/pricing](https://goodstories.world/pricing)
 **Full docs:** [api.goodstories.world/docs](https://api.goodstories.world/docs)
 
 ## Dependencies

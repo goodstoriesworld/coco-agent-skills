@@ -1,11 +1,11 @@
 ---
-name: coco-multi-agent-system
+name: multi-agent-system
 description: Build production-style multi-agent systems that plan, implement, test, and evaluate autonomously. Use when building orchestrated agent pipelines, breaking product ideas into milestones, or creating systems with planning, execution, testing, and evaluation layers.
 license: Apache-2.0
 metadata:
   author: good-stories-llc
   version: "1.0"
-  brand: COCO
+  brand: Good Stories
 ---
 
 # Multi-Agent System Builder
